@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}Chart 3{% endblock %}
+
+{% block api %}
+<div class="links"><a class="btn" href="{% url 'top_10_economical_bowlers_in_2015' %}">API</a>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script>
+    Highcharts.chart('chart', {
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Top 10 Economical Bowlers in 2015'
+        },
+        xAxis: {
+            categories: {{ bowlers| safe }}
+            },
+        yAxis: {
+        title: {
+            text: 'Economy'
+        }
+    },
+        series: [{
+            name: 'Bowlers',
+            data: {{ economy }}
+            }]
+        });
+</script>
+{% endblock %}

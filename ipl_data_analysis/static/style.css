@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    background-color: pink;
+    margin-bottom: 2rem;
+}
+
+.navbar a {
+    display: block;
+    text-align: center;
+    padding: 1rem;
+}
+
+.navbar a:hover {
+    background-color: yellow;
+    color: black;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.links a {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    background-color: blue;
+    color: red;
+    font-size: 1rem !important;
+    padding: 0.5rem !important;
+    border-radius: 25%;
+    text-decoration: none;
+}

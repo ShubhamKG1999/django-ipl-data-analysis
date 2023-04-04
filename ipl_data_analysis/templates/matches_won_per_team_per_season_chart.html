@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Chart 2{% endblock %}
+
+{% block api %}
+<div class="links"><a class="btn" href="{% url 'matches_won_per_team_per_season' %}">API</a>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script>
+
+    Highcharts.chart('chart', {
+        'chart': {
+            'type': 'column'
+        },
+        'title': {
+            'text': 'Matches Won per Team per Season'
+        },
+        'xAxis': {
+            'categories': {{ seasons }}
+        },
+        'yAxis': {
+        'title': {
+            'text': 'Number of Matches Won'
+        }
+    },
+        'series': {{ chart_series| safe }}
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block scripts %}
+<h1>IPL Data Analysis</h1>
+<div class="links">
+<a href="{% url 'matches_per_season_chart' %}">Matches Per Season</a>
+<a class="btn" href="{% url 'matches_per_season' %}">API</a>
+<a href="{% url 'matches_won_per_team_per_season_chart' %}">Matches Won Per Team Per Year</a>
+<a class="btn" href="{% url 'matches_won_per_team_per_season' %}">API</a>
+<a href="{% url 'extra_runs_per_team_in_2016_chart' %}">Extra Runs Per Team In 2016</a>
+<a class="btn" href="{% url 'extra_runs_per_team_in_2016' %}">API</a>
+<a href="{% url 'top_10_economical_bowlers_in_2015_chart' %}">Top 10 Economical Bowlers In 2015</a>
+<a class="btn" href="{% url 'top_10_economical_bowlers_in_2015' %}">API</a>
+</div>
+{% endblock %}
